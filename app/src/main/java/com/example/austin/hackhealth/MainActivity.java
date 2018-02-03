@@ -9,6 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import controller.StepController;
 import stepcookieBackend.Achievement;
 
@@ -19,6 +23,24 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        View.OnTouchListener listener = (View view, MotionEvent motionEvent) -> {
+            if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                view.setBackgroundColor(getColor(R.color.tap));
+            } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                view.setBackgroundColor(getColor(R.color.one));
+                view.performClick();
+            }
+
+            return true;
+        };
+        LinearLayout l1 = (LinearLayout) findViewById(R.id.achievement1);
+        LinearLayout l2 = (LinearLayout) findViewById(R.id.achievement2);
+        LinearLayout l3 = (LinearLayout) findViewById(R.id.achievement3);
+
+        l1.setOnTouchListener(listener);
+        l2.setOnTouchListener(listener);
+        l3.setOnTouchListener(listener);
 
         Achievement achievement = new Achievement() {
             @Override
