@@ -17,6 +17,12 @@ android {
         }
     }
     buildToolsVersion '26.0.2'
+    productFlavors {
+        flavor {
+            minSdkVersion 27
+            targetSdkVersion 27
+        }
+    }
 }
 
 dependencies {
