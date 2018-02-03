@@ -5,10 +5,27 @@
  */
 package stepcookieBackend.Multipliers;
 
+import stepcookieBackend.Achievement;
+
 /**
  *
  * @author Dan
  */
-public class OneHundredPerStep {
-    
+public class OneHundredPerStep extends Achievement{
+    public OneHundredPerStep(){
+        setName("One Man Army");
+        setDescription("Get an extra 100 points every steps");
+        setInternalSteps(0);
+    }
+
+    @Override
+    public int step() {
+        internalSteps++;
+        return 100;
+    }
+
+    @Override
+    public double progress() {
+        return 1;
+    }
 }

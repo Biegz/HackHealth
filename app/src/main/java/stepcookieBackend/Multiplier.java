@@ -13,9 +13,34 @@ package stepcookieBackend;
  */
 public abstract class Multiplier implements Steppable{
     
-    long internalSteps;
-    String description;
-    String name;
+    protected long internalSteps;
+    private String description;
+
+    public long getInternalSteps() {
+        return internalSteps;
+    }
+
+    public void setInternalSteps(long internalSteps) {
+        this.internalSteps = internalSteps;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
     //ImageView 
     
     

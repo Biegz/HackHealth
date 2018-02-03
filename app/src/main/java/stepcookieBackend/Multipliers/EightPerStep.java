@@ -11,18 +11,17 @@ import stepcookieBackend.Multiplier;
  *
  * @author Dan
  */
-public class EveryStep extends Multiplier {
-
-    public EveryStep(){
-        setName("Peg Leg");
-        setDescription("Get an extra point every step");
+public class EightPerStep extends Multiplier {
+    public EightPerStep(){
+        setName("Spider Legs");
+        setDescription("Get an extra 8 points every step");
         setInternalSteps(0);
     }
 
     @Override
     public int step() {
         internalSteps++;
-        return 1;
+        return 8;
     }
 
     @Override
