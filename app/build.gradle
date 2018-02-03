@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    flavorDimensions "default"
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.austin.hackhealth"
@@ -22,6 +23,10 @@ android {
             minSdkVersion 27
             targetSdkVersion 27
         }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 

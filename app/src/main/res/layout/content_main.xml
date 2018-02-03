@@ -55,10 +55,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/achievement1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/one"
             android:clickable="true"
+            android:focusable="true"
             android:orientation="horizontal">
 
             <FrameLayout
@@ -83,18 +85,35 @@
 
             </FrameLayout>
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="274dp"
+            <LinearLayout
+                android:layout_width="280dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:padding="20dp"
-                android:text="Own Two Feet"
-                android:textSize="18sp" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="280dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Own Two Feet"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Amount" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/achievement2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/one"
@@ -122,18 +141,34 @@
 
             </FrameLayout>
 
-            <TextView
-                android:id="@+id/textView16"
+            <LinearLayout
                 android:layout_width="280dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:padding="20dp"
-                android:text="Bread Crumbs"
-                android:textSize="18sp" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Bread Crumbs"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Amount" />
+            </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/achievement3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/one"
@@ -161,14 +196,29 @@
 
             </FrameLayout>
 
-            <TextView
-                android:id="@+id/textView17"
+            <LinearLayout
                 android:layout_width="280dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:padding="20dp"
-                android:text="Mad Hops"
-                android:textSize="18sp" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Mad Hops"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Amount" />
+            </LinearLayout>
 
         </LinearLayout>
 
