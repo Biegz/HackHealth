@@ -6,16 +6,18 @@
 package stepcookieBackend.Multipliers;
 
 import stepcookieBackend.Achievement;
+import stepcookieBackend.Multiplier;
 
 /**
  *
  * @author Dan
  */
-public class Every10Steps extends Achievement{
+public class Every10Steps extends Multiplier{
     public Every10Steps(){
         setName("Mad Hops");
         setDescription("Get an extra point every 10 steps");
         setInternalSteps(0);
+        setPrice(10000);
     }
 
     @Override

@@ -1,6 +1,12 @@
 package controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import stepcookieBackend.Achievement;
+import stepcookieBackend.Multiplier;
+import stepcookieBackend.Shop;
+import stepcookieBackend.Steppable;
 
 /**
  * Created by austin on 2/3/18.
@@ -8,30 +14,58 @@ import stepcookieBackend.Achievement;
 
 public class GeneralController {
 
-    private Achievement model;
+    Shop shop;
+    StepController sc;
 
-    public GeneralController(Achievement model){
-        this.model = model;
+    public long steps;
+    public long points;
+
+    private String name;
+
+    List<Achievement> achiements;
+    List<Multiplier> multipliers;
+
+    List<Steppable> steppables;
+
+    public GeneralController(){
+
+        this.shop =  new Shop(this);
+        this.sc = new StepController(this);
+
+        achiements = new ArrayList<>();
+        multipliers = new ArrayList<>();
+        steppables = new ArrayList<>();
     }
 
-    public String getName(){
-        return model.getName();
+    public void incrementSteps() {
+        steps++;
+        updateValues();
     }
 
-    public String getDescrition(){
-        return model.getDescription();
+    private void updateValues() { //Update progress bars
+        for (Steppable s : steppables) {
+            points += s.step();
+        }
     }
 
-    public Boolean getIsComplete(){
-        return model.isComplete();
+    private void purchase(Shop.Item item){
+        shop.buyItem(item);
     }
 
-    public void setInfo(String name, String description ){
-        model.setName(name);
-        model.setDescription(description);
+    public long getSteps() {
+        return steps;
     }
 
+    public long getPoints() {
+        return points;
+    }
 
+    public void addMultiplier(Multiplier item) {
+        multipliers.add(item);
+        steppables.add(item);
+    }
 
-
+    public void removePoints(long val) {
+        points -= val;
+    }
 }

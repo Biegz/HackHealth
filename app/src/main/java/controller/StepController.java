@@ -13,29 +13,22 @@ import com.example.austin.hackhealth.R;
  */
 
 public class StepController extends AppCompatActivity{
-    private Achievement model;
 
+    private StepCounterController pedometerController;
+    private GeneralController gc;
 
-    public StepController(Achievement model){
-        this.model = model;
+    public StepController(GeneralController gc){
+        this.gc = gc;
+        pedometerController = new StepCounterController(this);
     }
 
-    public Long getSteps(){
-        return model.getInternalSteps();
+    public void step() {
+        this.gc.incrementSteps();
+        updateView();
     }
-
 
     public void updateView(){
         TextView tv1 = (TextView) findViewById(R.id.textView3);
-        tv1.setText(Long.toString(getSteps()));
+        tv1.setText(Long.toString(gc.getSteps()));
     }
-
-    public void setSteps(long x){
-        model.setInternalSteps(100);
-    }
-
-
-
-
-
 }

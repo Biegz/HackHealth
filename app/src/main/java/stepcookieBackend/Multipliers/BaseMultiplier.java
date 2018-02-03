@@ -12,6 +12,7 @@ public class BaseMultiplier extends Multiplier {
         setName("Own Two Feet");
         setDescription("Get an extra point every steps");
         setInternalSteps(0);
+        setPrice(0);
     }
 
     @Override

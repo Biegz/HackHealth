@@ -6,16 +6,18 @@
 package stepcookieBackend.Multipliers;
 
 import stepcookieBackend.Achievement;
+import stepcookieBackend.Multiplier;
 
 /**
  *
  * @author Dan
  */
-public class OneHundredPerStep extends Achievement{
+public class OneHundredPerStep extends Multiplier {
     public OneHundredPerStep(){
         setName("One Man Army");
         setDescription("Get an extra 100 points every steps");
         setInternalSteps(0);
+        setPrice(50000000);
     }
 
     @Override

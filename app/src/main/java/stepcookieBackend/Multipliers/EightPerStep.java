@@ -16,6 +16,7 @@ public class EightPerStep extends Multiplier {
         setName("Spider Legs");
         setDescription("Get an extra 8 points every step");
         setInternalSteps(0);
+        setPrice(1000000);
     }
 
     @Override

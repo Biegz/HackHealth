@@ -17,6 +17,7 @@ public class EveryStep extends Multiplier {
         setName("Peg Leg");
         setDescription("Get an extra point every step");
         setInternalSteps(0);
+        setPrice(100000);
     }
 
     @Override

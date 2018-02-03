@@ -15,6 +15,15 @@ public abstract class Multiplier implements Steppable{
     
     protected long internalSteps;
     private String description;
+    long price;
+
+    public long getPrice() {
+        return price;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
+    }
 
     public long getInternalSteps() {
         return internalSteps;
